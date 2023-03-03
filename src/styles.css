@@ -1,0 +1,433 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+:root {
+  --primary-color: #047aed;
+  --secondary-color: #1c3fa8;
+  --dark-color: #002240;
+  --light-color: #f4f4f4;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+p {
+  margin: 10px 0;
+}
+
+img {
+  width: 100%;
+}
+
+/* header style */
+.header {
+  background-color: var(--primary-color);
+  color: #fff;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
+header .flex {
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-link a {
+  color: #fff;
+  padding: 10px;
+  margin: 0 5px;
+}
+
+.nav-link a:hover {
+  border-bottom: 1px solid #fff;
+}
+
+/* end of header style */
+
+/* showcase section*/
+.showcase {
+  height: 400px;
+  background-color: var(--primary-color);
+  position: relative;
+  color: #fff;
+}
+
+.showcase h1 {
+  font-size: 40px;
+}
+
+.showcase p {
+  margin: 20px 0;
+}
+
+.showcase-text {
+  animation: slideInfromLeft 2s ease-in;
+}
+
+.showcase .grid {
+  grid-template-columns: 55% auto;
+  gap: 30px;
+  overflow: visible;
+}
+
+.showcase-form {
+  position: relative;
+  top: 60px;
+  height: 350px;
+  width: 400px;
+  padding: 40px;
+  z-index: 100;
+  justify-self: flex-end;
+  animation: slideInfromRight 2s ease-in;
+}
+
+.showcase-form input[type="text"],
+.showcase-form input[type="email"] {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  padding: 3px;
+  font-size: 16px;
+}
+
+.showcase-form input:focus {
+  outline: none;
+}
+
+.showcase::before,
+.showcase::after {
+  content: "";
+  background: #fff;
+  position: absolute;
+  bottom: -70px;
+  height: 100px;
+  left: 0;
+  right: 0;
+  transform: skewY(-3deg);
+}
+
+/* end of showcase section*/
+
+/* Stats section starts */
+.stats {
+  padding-top: 100px;
+  animation: slideInfromBottom 2s ease-in;
+}
+
+.stats-heading {
+  max-width: 500px;
+  margin: auto;
+}
+
+.stats .grid h3 {
+  font-size: 35px;
+}
+
+.stats .grid p {
+  font-size: 20px;
+  font-weight: bold;
+}
+/* Stats section ends */
+
+/* cli section starts */
+.cli .grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.cli .grid img {
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 2;
+}
+
+/* cli section ends */
+
+/* languages section starts */
+.languages .flex {
+  flex-wrap: wrap;
+}
+
+.languages .card {
+  text-align: center;
+  margin: 18px 10px 40px;
+  transition: transform 0.2s;
+}
+
+.languages .card:hover {
+  transform: translateY(-15px);
+}
+
+.languages .card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+/* languages section ends */
+
+/* Feature */
+.features {
+  height: 300px;
+}
+
+.features .grid {
+  grid-template-columns: 75% auto;
+}
+
+.platform {
+  background-color: var(--light-color);
+}
+
+.platform .grid {
+  grid-template-columns: 65% auto;
+}
+
+.platform img {
+  justify-self: flex-end;
+  width: 300px;
+}
+
+/* Features */
+
+.features-main .grid {
+  grid-gap: 10px;
+}
+
+.features-main .flex {
+  justify-content: space-between;
+}
+
+/* footer section starts */
+.footer nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer .social a {
+  margin: 0 10px;
+}
+.fa-github:hover {
+  color: #000000;
+}
+
+.fa-facebook:hover {
+  color: #1773ea;
+}
+
+.fa-instagram:hover {
+  color: #b32e87;
+}
+
+.fa-twitter:hover {
+  color: #1c9cea;
+}
+/* footer section ends */
+
+.main-heading {
+  grid-row: 1 / 2;
+  grid-column: 1 / 4;
+}
+
+.main-content {
+  grid-row: 2/3;
+  grid-column: 1/3;
+}
+
+.aside-one {
+  grid-row: 2/3;
+  grid-column: 3/4;
+}
+
+.aside-two {
+  grid-row: 3/4;
+  grid-column: 3/4;
+}
+
+.footer-one {
+  grid-row: 3/4;
+  grid-column: 1/2;
+}
+
+.footer-two {
+  grid-row: 3/4;
+  grid-column: 2/3;
+}
+
+/* Docs */
+.docs .grid img {
+  width: 200px;
+  justify-self: flex-end;
+}
+/* Docs end */
+
+/* Animations */
+
+@keyframes slideInfromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInfromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInfromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInfromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Animations ends*/
+
+@media (max-width: 900px) {
+  .grid,
+  .showcase .grid,
+  .cli .grid,
+  .cloud .grid,
+  .stats .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .showcase {
+    height: auto;
+  }
+  .showcase-text {
+    text-align: center;
+    margin-top: 40px;
+  }
+  .showcase-form {
+    justify-self: center;
+    margin: auto;
+  }
+  .cli .grid > *:first-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .platform .flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .features {
+    text-align: center;
+    height: auto;
+  }
+
+  .features .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features .grid img {
+    width: 45%;
+    object-fit: contain;
+    justify-self: center;
+  }
+
+  .features-main .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+  .features-main .card > i {
+    margin-right: 20px;
+  }
+
+  .features-main .grid > div {
+    grid-column: 1 / span 1;
+  }
+
+  .main-heading {
+    grid-row: 1 / 2;
+  }
+
+  .main-content {
+    grid-row: 2/3;
+  }
+
+  .aside-one {
+    grid-row: 3/4;
+  }
+
+  .aside-two {
+    grid-row: 4/5;
+  }
+
+  .footer-one {
+    grid-row: 5/6;
+  }
+
+  .footer-two {
+    grid-row: 6/7;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    height: 110px;
+  }
+  .header .flex {
+    flex-direction: column;
+  }
+  .nav-links {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+  }
+
+  .showcase-form {
+    width: 300px;
+  }
+}
